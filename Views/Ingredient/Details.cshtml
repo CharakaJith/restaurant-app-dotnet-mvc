@@ -1,0 +1,54 @@
+﻿@model Ingredient
+
+@{
+    ViewBag.Title = "Ingredient Details";
+}
+
+<div class="container mt-4">
+    <div class="card shadow rounded">
+        <div class="card-header bg-gradient text-black d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">@Model.Name Details</h4>
+            <a asp-action="Create" class="btn btn-success">
+                <i class="bi bi-plus-circle me-1"></i> Create New Ingredient
+            </a>
+        </div>
+
+        <div class="card-body">
+            @if (Model.ProductIngredients != null && Model.ProductIngredients.Any())
+            {
+                <h5 class="mb-3">Products using this ingredient:</h5>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var ingredient in Model.ProductIngredients)
+                            {
+                                <tr>
+                                    <td>@ingredient.Product.ProductName</td>
+                                    <td>@ingredient.Product.ProductDescription</td>
+                                    <td>@ingredient.Product.Price.ToString("C")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <p class="text-muted">No products are using this ingredient yet.</p>
+            }
+        </div>
+
+        <div class="card-footer text-end">
+            <a asp-action="Index" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left"></i> Back to List
+            </a>
+        </div>
+    </div>
+</div>
