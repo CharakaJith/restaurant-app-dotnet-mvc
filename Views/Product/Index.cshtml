@@ -9,7 +9,7 @@
         <div class="card-header d-flex justify-content-between align-items-center bg-gradient text-black">
             <h4 class="mb-0">Products</h4>
             <a asp-action="CreateEdit" class="btn btn-success">
-                <i class="bi bi-plus-circle me-1"></i> Create New Product
+                Create New Product
             </a>
         </div>
 
@@ -34,11 +34,11 @@
                                     <div class="mt-auto d-flex justify-content-between flex-wrap gap-2">
                                         <a asp-action="Details" asp-route-id="@prod.ProductId"
                                            class="btn btn-sm btn-outline-primary w-100">
-                                            <i class="bi bi-eye"></i> Details
+                                            Details
                                         </a>
                                         <a asp-action="CreateEdit" asp-route-id="@prod.ProductId"
                                            class="btn btn-sm btn-outline-success w-100">
-                                            <i class="bi bi-pencil"></i> Update
+                                            Update
                                         </a>
                                         <button type="button"
                                                 class="btn btn-sm btn-outline-danger w-100"
@@ -46,7 +46,7 @@
                                                 data-bs-target="#deleteModal"
                                                 data-id="@prod.ProductId"
                                                 data-name="@prod.ProductName">
-                                            <i class="bi bi-trash"></i> Delete
+                                            Delete
                                         </button>
                                     </div>
                                 </div>

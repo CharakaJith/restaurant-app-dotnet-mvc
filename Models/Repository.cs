@@ -57,6 +57,30 @@ namespace restaurant_app_dotnet_mvc.Models
             return await query.FirstOrDefaultAsync(e => EF.Property<int>(e, pkName) == id);
         }
 
+        public async Task<IEnumerable<T>> GetAllByIdAsync<TKey>(TKey id, string prop, QueryOption<T> options)
+        {
+            IQueryable<T> query = _dbSet;
+
+            if (options.HasWhere)
+            {
+                query = query.Where(options.Where);
+            }
+
+            if (options.HasOrderBy)
+            {
+                query = query.OrderBy(options.OrderBy);
+            }
+
+            foreach (string include in options.GetIncludes())
+            {
+                query = query.Include(include);
+            }
+
+            query = query.Where(e => EF.Property<TKey>(e, prop).Equals(id));
+
+            return await query.ToListAsync();
+        }
+
         public async Task UpdateAsync(T entity)
         {
             _context.Update(entity);
