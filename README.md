@@ -16,8 +16,6 @@ The app allows managing ingredients, products, and orders in a restaurant scenar
 - Session management
 - Dependency Injection and Repository pattern
 
----
-
 ## Features
 
 - **User Authentication**: Register, Login, Logout
@@ -28,16 +26,12 @@ The app allows managing ingredients, products, and orders in a restaurant scenar
 - **Image Uploads**: Upload product images and display them
 - **Responsive UI**: Built with Bootstrap 5
 
----
-
 ## Prerequisites
 
 - [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later
 - [SQLite](https://sqlite.org/index.html) (included via EF Core)
 - IDE: Visual Studio 2022 / VS Code / Rider
 - Node.js (optional, if you want to manage frontend packages)
-
----
 
 ## Getting Started
 
@@ -68,8 +62,6 @@ The app allows managing ingredients, products, and orders in a restaurant scenar
 
 5. Open your browser and navigate to `https://localhost:7090` (or the URL displayed in the console).
 
----
-
 ## Project Structure
 
 - **Controllers/** – MVC controllers handling HTTP requests
@@ -80,15 +72,11 @@ The app allows managing ingredients, products, and orders in a restaurant scenar
 - **wwwroot/** – Static assets including CSS, JS, and images
 - **Areas/Identity/** – Authentication and user management UI and logic
 
----
-
 ## Notes
 
 - Image uploads are stored in `wwwroot/images`.
 - User sessions store shopping cart data temporarily.
 - Authorization restricts some pages to logged-in users.
-
----
 
 ## Learn More
 
@@ -96,20 +84,14 @@ The app allows managing ingredients, products, and orders in a restaurant scenar
 - [Entity Framework Core Docs](https://learn.microsoft.com/en-us/ef/core/)
 - [Bootstrap 5 Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 
----
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
 
 ## Acknowledgements
 
 - [Programming with Mosh](https://www.youtube.com/@programmingwithmosh) for the original tutorial
 - ASP.NET Core and EF Core teams at Microsoft
-
----
 
 ## Contact
 Email: [charaka.info@gmail.com](mailto:charaka.info@gmail.com) | LinkedIn: [Charaka Jith Gunasinghe](https://www.linkedin.com/in/charaka-gunasinghe/)
